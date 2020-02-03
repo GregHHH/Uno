@@ -68,7 +68,7 @@ Liste add_value(Liste L, char *value)
     Element *A = malloc(sizeof *A);
     A->carte=*value;
     A->suivant = L;
-	printf("%s", A);
+	//printf("%s", A);
     return A;
 }
 
@@ -96,5 +96,5 @@ int main(int argc, char **argv)
 	temp = Deck[0];
 	printf("%s", temp);
 	add_value(Pioche, temp);
-	affichageListe(Pioche);
+	//affichageListe(Pioche);
 }
