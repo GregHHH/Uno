@@ -5,7 +5,6 @@
 #define SIZE 108
 
 
-
 	const char *Deck[] =  
 	{
 		"B0","B1","B1","B2","B2","B3","B3","B4","B4","B5","B5","B6","B6","B7","B7","B8","B8","B9","B9", "B+2","B+2","Brev","Brev","Bpasse","Bpasse","Joker","+4",
@@ -46,7 +45,5 @@ int main(int argc, char **argv)
         printf("%i: %s\n", p, Deck[p]);
 
 	}
-
-
 
 }
