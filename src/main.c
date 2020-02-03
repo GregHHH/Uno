@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "gestion.h"
 #define SIZE 108
+
 
 
 	const char *Deck[] =  
@@ -11,6 +13,7 @@
 		"V0","V1","V1","V2","V2","V3","V3","V4","V4","V5","V5","V6","V6","V7","V7","V8","V8","V9","V9","V+2","V+2","Vrev","Vrev","Vpasse","Vpasse","Joker","+4",
 		"R0","R1","R1","R2","R2","R3","R3","R4","R4","R5","R5","R6","R6","R7","R7","R8","R8","R9","R9","R+2","R+2","Rrev","Rrev","Rpasse","Rpasse","Joker","+4"
 	};
+
 
 void shuffleboard(int taille)
 {
@@ -29,14 +32,21 @@ void shuffleboard(int taille)
     }
 }
 
+
 int main(int argc, char **argv)
 {
 	srand (time(NULL));
     shuffleboard(SIZE);
+	int premiereDistrib = 14;
+	int indexDistrib;
+	int compteurPCartes;
 	int p;
     for (p = 0; p < SIZE; p++) 	
 	{
         printf("%i: %s\n", p, Deck[p]);
 
 	}
+
+
+
 }
