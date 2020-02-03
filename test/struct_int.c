@@ -56,7 +56,7 @@ void affichageListe(Liste *A)
     }
 }
 
-Element* initialisation(char value)
+Element* initialisation(int value)
 {
 
     Element *element = malloc(sizeof *element);
