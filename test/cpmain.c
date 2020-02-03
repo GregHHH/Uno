@@ -31,6 +31,46 @@ void shuffleboard(int taille)
 }
 
 
+struct Element
+{
+    char carte;
+    struct Element *suivant;
+};
+
+typedef struct Element Element;
+typedef struct Element *Liste;
+
+
+Element* initialisation(char value)
+{
+
+    Element *element = malloc(sizeof *element);
+    element->carte = value;
+    element->suivant = NULL;
+
+    return element;
+}
+
+
+Liste add_value(Liste L, char value)
+{
+    Element *A = malloc(sizeof *A);
+    A->carte=value;
+    A->suivant = L;
+    return A;
+}
+
+
+void affichageListe(Liste *A)
+{
+    Element *B = A;
+    while(B)
+    {
+        printf("%c | ", B->carte);
+        B = B->suivant;
+    }
+}
+
 int main(int argc, char **argv)
 {
 	srand (time(NULL));
@@ -44,5 +84,9 @@ int main(int argc, char **argv)
         printf("%i: %s\n", p, Deck[p]);
 
 	}
+	
+    Liste Pioche;
+    Liste Playeur1;
+    Liste Playeur2;
 
 }
