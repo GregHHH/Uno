@@ -1,5 +1,6 @@
-#include "main.h"
 #include "includes.h"
+
+
 
 char* GetValue(int t)
 {
@@ -88,17 +89,4 @@ char* translate(int t)
     strcat(cat, value);
 	
 	return(cat);
-}
-
-void translateDisplay(void)
-{
-    int p;
-	char *tr;
-	tr = malloc(sizeof(char)*5);
-    for (p = 0; p < SIZE; p++) 	
-	{
-		tr = translate(Deckint[p]);
-        printf("%i: %s\n", Deckint[p], tr);
-	}
-	
 }
