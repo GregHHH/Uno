@@ -44,7 +44,36 @@ void shuffleboard(int taille)
         }
     }
 }
+char* translate(int t)
+{
+     if (t >= 100 && t < 115)
+     {
+         return "Red";
+     }
+     if (t >= 200 && t < 215)
+     {
+         return "Blue";
+     }
+     if (t >= 300 && t < 315)
+     {
+         return "Yellow";
+     }
+     if (t >= 400 && t < 415)
+     {
+         return "Green";
+     }
+     return 0;
+}
 
+void translateDisplay(void)
+{
+    int p; 
+    for (p = 0; p < SIZE; p++) 	
+	{
+        printf("%i: %s\n", p, translate(Deckint[p]));
+	}
+	
+}
 
 void affichageListe(Liste *A)
 {
@@ -101,4 +130,5 @@ int main(int argc, char **argv)
 	printf("%d", temp);
 	add_value(Pioche, temp);
 	affichageListe(Pioche);
+    translateDisplay();
 }
