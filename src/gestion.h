@@ -1,3 +1,0 @@
-
-
-void shuffleboard(int taille);
