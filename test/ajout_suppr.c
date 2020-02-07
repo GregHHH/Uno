@@ -71,7 +71,7 @@ Liste piocher(Liste A, Liste B)
 
 }
 
-delete_value(Liste A, int value)
+int delete_value(Liste A, int value)
 {
     Element B;
     if (A != NULL)
@@ -83,10 +83,9 @@ delete_value(Liste A, int value)
             A->suivant = A->suivant->suivant;
         }
         else
-        {
-            delete_value(A->suivant, value);
-        }
+			delete_value(A->suivant, value);
     }
+	return 0;
 }
 
 int main(int argc, char **argv)
